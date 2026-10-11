@@ -74,7 +74,7 @@ En fases siguientes, definir por entorno los nombres de variables para conexione
 
 El nuevo `scripts/inventory-phase0.ts` es TypeScript y entra en el typecheck estricto. Los cuatro scripts `.cjs` existentes todavía requieren migración o JSDoc con `checkJs`; no afirmar que el gate sin `any` cubre esos scripts. No hay ESLint, commitlint, CI, SAST, ZAP, SBOM ni cobertura automática configurados aún. El snapshot enumera archivos de más de 300 líneas; los límites de función y complejidad todavía no están medidos por lint.
 
-No existe `.git` en esta carpeta. Por tanto no hay historial que escanear, branch protection que comprobar ni pipeline remoto que capturar. No crear commits, repositorio remoto o despliegues como sustituto de esa evidencia.
+En el inventario inicial no existía `.git`. El titular inicializó el repositorio y configuró el remoto `PixelCraftDavid/CodexSana`; ahora la rama local es `main`. Esto no demuestra protección de ramas, escaneo de historial ni CI remoto en verde. La conexión con Vercel y el build remoto siguen pendientes.
 
 ## Evidencia y pendientes
 

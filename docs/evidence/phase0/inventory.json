@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-10-11T21:32:07.463Z",
+  "generatedAt": "2026-10-11T21:57:11.994Z",
   "runtime": {
     "node": "v24.21.0",
     "platform": "win32",
     "architecture": "x64"
   },
-  "packageLockSHA256": "52e0ec3fd0725db85a9da149805205a2ca2d9dc6c492d64ff1fcbad3812b951f",
-  "gitRepositoryPresent": false,
+  "packageLockSHA256": "3e188698e75d17b25104d7e19bafb8d372fea3f232c26495694276933326a343",
+  "gitRepositoryPresent": true,
   "build": {
-    "buildId": "77PuG6Aj6B-B_s6SpLql7",
+    "buildId": "plGTQAfe-D6VkBf8R2z9N",
     "staticRoutes": [
-      "/",
-      "/conceptos"
+      "/conceptos",
+      "/"
     ],
     "dynamicRoutes": [
+      "/conceptos/[concept]",
       "/ficha/[id]/[concept]",
-      "/ficha/[id]",
-      "/conceptos/[concept]"
+      "/ficha/[id]"
     ],
     "nextDynamicRouteCount": 3,
     "vercelFunctionCount": null,

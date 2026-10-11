@@ -66,8 +66,8 @@ Las fichas y tarjetas muestran **«Datos reportados por el titular»** y **«No 
 
 El encargo de producción se trabaja una fase por sesión. Consulta el [inventario de Fase 0](docs/FASE-0.md), las [decisiones de arquitectura](docs/adr/README.md), las [licencias](docs/DEPENDENCIAS.md) y la [comprobación de plataformas](docs/PLATAFORMAS.md).
 
-El titular confirmó Hobby para demostración sin actividad comercial; dominio definitivo pendiente. No hay cuenta/proyecto Vercel vinculado ni datos reales autorizados. El build local tiene tres rutas dinámicas Next; el conteo de funciones Vercel todavía no está comprobado.
+El titular confirmó Hobby para demostración sin actividad comercial; dominio definitivo pendiente. Ya inició sesión en Vercel; la vinculación del proyecto y su despliegue aún no están comprobados. No hay datos reales autorizados. El build local tiene tres rutas dinámicas Next; el conteo de funciones Vercel todavía no está comprobado. Consulta los [pasos del primer despliegue de demostración](docs/DESPLIEGUE-DEMO.md).
 
 La nueva versión excluirá fotografías de pacientes. Su eliminación está inventariada y aún pendiente de implementación. La configuración actual del PDF solicita cifrado; falta evidencia independiente de qpdf. No se declara el prototipo seguro ni apto para datos reales.
 
-Node: `24.x` en engines, versión local `24.21.0` en `.node-version`. Reproduce el inventario después del build con `npm run inventory:phase0`. Usa el lockfile y `npm ci` en CI. El reporte npm actual tiene un hallazgo alto en PostCSS transitivo; no pasar a la siguiente fase con ese gate en rojo.
+Node: `24.x` en engines, versión local `24.21.0` en `.node-version`. Reproduce el inventario después del build con `npm run inventory:phase0`. Usa el lockfile y `npm ci` en CI. El hallazgo inicial de PostCSS se corrigió con un override acotado a 8.5.29 manteniendo Next 15; la auditoría npm de producción posterior reporta cero vulnerabilidades. Los restantes gates de producción siguen pendientes.
