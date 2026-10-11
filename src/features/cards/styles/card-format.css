@@ -1,0 +1,232 @@
+.card-format-picker {
+  padding: 0;
+  margin: 22px 0;
+  border: 0;
+  min-width: 0;
+  color: inherit;
+}
+.card-format-picker legend {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.card-format-picker > p {
+  font-size: 11px;
+  color: inherit;
+  opacity: 0.65;
+  margin: 7px 0 13px;
+}
+.card-format-choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+.card-format-choice {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px 12px;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 180ms,
+    background 180ms,
+    transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.card-format-choice[data-selected='true'] {
+  background: color-mix(in srgb, currentColor 5%, transparent);
+  border-color: currentColor;
+}
+.card-format-choice:hover {
+  border-color: currentColor;
+}
+.card-format-choice:active {
+  transform: scale(0.985);
+}
+.card-format-choice input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.card-format-choice:has(input:focus-visible) {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.card-format-choice-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.card-format-choice-text {
+  display: grid;
+  gap: 6px;
+  padding-right: 6px;
+}
+.card-format-choice-text strong {
+  font-size: 14px;
+}
+.card-format-choice-text > span {
+  font-size: 10px;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+.card-format-recommended {
+  font-size: 7px;
+  letter-spacing: 0.06em;
+}
+.card-format-choice-check {
+  width: 18px;
+  height: 18px;
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+.card-format-context {
+  display: block;
+  font-size: 10px;
+  opacity: 0.7;
+  line-height: 1.6;
+  margin-top: 11px;
+}
+.card-format-picker:disabled {
+  opacity: 0.5;
+}
+.card-review-summary {
+  color: inherit;
+  border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  padding-top: 18px;
+  margin: 20px 0 0;
+}
+.card-review-summary > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.card-review-summary dl {
+  display: grid;
+  gap: 8px;
+  margin: 15px 0;
+}
+.card-review-summary dl > div {
+  display: grid;
+  grid-template-columns: 73px 1fr;
+  gap: 12px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.card-review-summary dt {
+  opacity: 0.6;
+}
+.card-review-summary dd {
+  margin: 0;
+}
+.card-review-summary > p {
+  font-size: 10px;
+  line-height: 1.6;
+  opacity: 0.65;
+}
+.card-print-warnings {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 14px;
+  background: #fff1d9;
+  color: #74432a;
+  border: 1px solid #e7c796;
+  border-radius: 10px;
+  margin-top: 14px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.card-print-warnings > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.card-print-warnings ul {
+  list-style: disc;
+  padding-left: 16px;
+  margin: 7px 0;
+}
+.card-no-qr-note {
+  margin-top: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #47614b;
+  background: #eef3e7;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.card-no-qr-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.card-workshop-preview .card-review-summary {
+  color: #244a3d;
+}
+.card-export-content .card-format-picker {
+  color: var(--card-accent);
+}
+.card-export-content .card-review-summary {
+  color: var(--card-accent);
+}
+.card-export-format-note {
+  font-size: 10px;
+  color: var(--card-accent);
+  opacity: 0.65;
+  margin-top: -12px;
+}
+.card-mode-chip {
+  display: inline-block;
+  margin-top: 4px;
+  color: #62775b;
+  font-size: 9px;
+}
+.card-qr-extra {
+  border-top: 1px solid #dce5d6;
+  margin-top: 18px;
+  padding-top: 14px;
+  color: #63765a;
+  font-size: 11px;
+}
+.card-qr-extra summary {
+  cursor: pointer;
+  min-height: 38px;
+  display: list-item;
+}
+@media (max-width: 420px) {
+  .card-format-choice {
+    padding: 14px 10px;
+    gap: 8px;
+  }
+  .card-format-choice-icon svg {
+    width: 20px;
+  }
+  .card-format-choice-text strong {
+    font-size: 13px;
+  }
+  .card-format-choice-check {
+    width: 15px;
+    height: 15px;
+    right: 8px;
+  }
+  .card-format-choice-text > span {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-format-choice {
+    transition: none;
+    transform: none !important;
+  }
+}

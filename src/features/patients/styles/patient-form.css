@@ -1,0 +1,206 @@
+/* patients: extracted from the shared baseline. */
+
+.form-heading h2 > span {
+  color: var(--coral);
+}
+.form-dialog {
+  width: 590px;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin-left: auto;
+  border-radius: 16px 0 0 16px;
+  padding: 0;
+  animation: drawer-in 0.4s var(--ease) both;
+}
+.form-heading {
+  padding: 34px 32px 25px;
+  border-bottom: 1px solid var(--line);
+}
+.form-heading .eyebrow {
+  font-size: 7px;
+}
+.form-heading h2 {
+  font-size: 35px;
+}
+.form-heading p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #909b84;
+}
+.form-body {
+  padding: 27px 32px;
+}
+.photo-upload {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+.photo-upload input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+}
+.photo-upload-preview {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  background: #edf2e5;
+  border: 1px dashed #bbcdb0;
+  display: grid;
+  place-items: center;
+  color: #8ea777;
+  overflow: hidden;
+}
+.photo-upload-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: backdrop-in 0.3s ease-out;
+}
+.photo-upload strong {
+  font-size: 11px;
+  display: block;
+  font-weight: 500;
+}
+.photo-upload small {
+  display: block;
+  font-size: 9px;
+  margin-top: 6px;
+  color: #9aa68d;
+}
+.photo-upload:focus-within .photo-upload-preview {
+  outline: 3px solid #e68b6c;
+  outline-offset: 3px;
+}
+.field {
+  display: block;
+  color: #6f8163;
+  font-size: 11px;
+  margin-bottom: 17px;
+}
+.field > span {
+  color: #c4856b;
+}
+.field input,
+.field select,
+.field textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid #e0e7d8;
+  border-radius: 6px;
+  padding: 12px;
+  color: #41553a;
+  background: #fff;
+  font-size: 12px;
+  transition: border-color 0.2s;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #a5ad9a;
+  font-size: 11px;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 67px;
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: #92ac7d;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-divider {
+  border-top: 1px solid var(--line);
+  margin: 11px 0 25px;
+}
+.contact-fields {
+  border: 0;
+  padding: 0;
+  margin: 0 0 9px;
+}
+.contact-fields legend {
+  width: 100%;
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  color: #9aa88c;
+  margin: 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-fields legend button {
+  display: flex;
+}
+.add-contact {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #6c8856;
+  padding: 6px 0;
+}
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 16px;
+  background: #eef3e6;
+  border-radius: 7px;
+  margin-top: 22px;
+  color: #81986c;
+}
+.form-consent p {
+  font-size: 10px;
+  line-height: 1.7;
+}
+.form-actions {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 18px 32px;
+  background: #fdfefbee;
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+}
+.field-error {
+  color: #b4573c;
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+@media (max-width: 640px) {
+  .form-dialog {
+    width: 100%;
+    max-height: 100dvh;
+    border-radius: 0;
+    padding: 0;
+  }
+  .form-heading {
+    padding-inline: 24px;
+  }
+  .form-body {
+    padding-inline: 24px;
+  }
+  .form-actions {
+    padding: 16px 20px;
+  }
+  .form-actions .button {
+    font-size: 10px;
+    padding: 12px;
+  }
+  .form-grid {
+    gap: 12px;
+  }
+  .form-heading h2 {
+    font-size: 34px;
+  }
+}

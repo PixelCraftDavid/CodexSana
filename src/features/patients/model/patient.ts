@@ -1,0 +1,20 @@
+import type { CardCustomization } from '../../cards/model/card-customization';
+import type { PatientDesign } from '../../designs/model/patient-designs';
+import type { Sex } from './demographics';
+export type Contact = { name: string; relationship: string; phone: string };
+export type Patient = {
+  id: string;
+  name: string;
+  age: number;
+  sex?: Sex;
+  design?: PatientDesign;
+  cardStyle?: CardCustomization;
+  blood: string;
+  allergies: string;
+  conditions: string;
+  medications: string;
+  photo?: string;
+  color: string;
+  updated: string;
+  contacts: Contact[];
+};

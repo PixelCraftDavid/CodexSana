@@ -1,0 +1,334 @@
+.directory-workspace {
+  min-width: 0;
+}
+.directory-filters {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dfe5dc;
+}
+.directory-filters .search-box {
+  flex: 1;
+  min-width: 190px;
+  max-width: none;
+  height: 44px;
+  margin: 0;
+  padding: 0 13px;
+  border: 1px solid #dce3d8;
+  background: white;
+  border-radius: 7px;
+}
+.directory-filters .search-box input {
+  font-size: 12px;
+  min-width: 0;
+  width: 100%;
+  color: var(--ink);
+}
+.directory-filters kbd {
+  white-space: nowrap;
+  font:
+    9px Consolas,
+    monospace;
+  padding: 3px 5px;
+  color: #73816e;
+  background: #f1f4ed;
+  border-radius: 3px;
+}
+.directory-filters > label:not(.search-box) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.directory-filters > label > span {
+  font-size: 10px;
+  color: #657960;
+}
+.directory-filters select {
+  height: 44px;
+  border: 1px solid #dce3d8;
+  border-radius: 7px;
+  background: white;
+  color: #36573c;
+  font-size: 11px;
+  padding: 0 26px 0 10px;
+  max-width: 205px;
+}
+.directory-sort {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px;
+  font-size: 11px;
+  border-radius: 7px;
+  border: 1px solid #dce3d8;
+}
+.directory-sort[aria-pressed='true'] {
+  background: #e4ecdc;
+}
+.directory-reset {
+  min-height: 44px;
+}
+.directory-results {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 21px 0 16px;
+  font-size: 11px;
+}
+.directory-results strong {
+  font-weight: 600;
+}
+.directory-results span {
+  color: #6b7769;
+}
+.directory-table-wrap {
+  border: 1px solid #dfe5dc;
+  border-radius: 12px;
+  background: white;
+}
+.directory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.directory-table th {
+  background: #f2f5ee;
+  color: #67785f;
+  text-align: left;
+  font-weight: 500;
+  font-size: 10px;
+  padding: 14px 20px;
+}
+.directory-table th:first-child {
+  border-radius: 12px 0 0 0;
+}
+.directory-table th:last-child {
+  border-radius: 0 12px 0 0;
+}
+.directory-table td {
+  padding: 20px;
+  border-top: 1px solid #e8ede3;
+}
+.directory-person {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.directory-person > div {
+  min-width: 0;
+}
+.directory-person strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+.directory-person small,
+.directory-demographics small,
+.directory-design small {
+  display: block;
+  font-size: 10px;
+  color: #6c7968;
+  margin-top: 6px;
+}
+.directory-demographics > span,
+.directory-design > span {
+  font-size: 12px;
+}
+.directory-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+.directory-view {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 11px;
+  color: #426d4e;
+  padding: 8px 0;
+}
+.patient-actions-disclosure {
+  position: relative;
+}
+.patient-actions-disclosure summary {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e0e7da;
+  border-radius: 7px;
+  cursor: pointer;
+  list-style: none;
+}
+.patient-actions-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+.patient-actions-disclosure summary:hover,
+.patient-actions-disclosure[open] summary {
+  background: #edf3e6;
+}
+.patient-actions-disclosure summary:focus-visible {
+  outline: 3px solid #e68b6c;
+  outline-offset: 3px;
+}
+.patient-actions-popover {
+  position: absolute;
+  z-index: 12;
+  right: 0;
+  top: 42px;
+  width: 200px;
+  padding: 7px;
+  background: white;
+  border: 1px solid #dce4d6;
+  box-shadow: 0 10px 30px #23432a12;
+  border-radius: 10px;
+  animation: view-arrive 0.2s var(--ease) both;
+}
+.patient-actions-popover button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  min-height: 40px;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 11px;
+}
+.patient-actions-popover button:hover {
+  background: #eff4e8;
+}
+.directory-note {
+  margin-top: 20px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #67765f;
+}
+.directory-empty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 65px 20px;
+  background: #fff;
+  border: 1px solid #e0e6da;
+  border-radius: 12px;
+}
+.directory-empty h2 {
+  font-size: 20px;
+}
+.directory-empty p {
+  color: #62715b;
+}
+@media (max-width: 1150px) {
+  .directory-filters .search-box {
+    flex-basis: 100%;
+  }
+  .directory-filters > label:not(.search-box) {
+    flex: 1;
+  }
+  .directory-filters select {
+    width: 100%;
+    max-width: none;
+  }
+  .directory-table td,
+  .directory-table th {
+    padding-inline: 14px;
+  }
+  .directory-person {
+    gap: 8px;
+  }
+}
+@media (max-width: 800px) {
+  .directory-design {
+    display: none;
+  }
+  .directory-table th:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .directory-filters {
+    gap: 12px 10px;
+  }
+  .directory-filters > label:not(.search-box) {
+    flex: 1 1 calc(50% - 10px);
+  }
+  .directory-filters > label > span {
+    font-size: 10px;
+  }
+  .directory-filters select {
+    font-size: 11px;
+  }
+  .directory-sort {
+    flex: 1;
+    justify-content: center;
+  }
+  .directory-filters kbd {
+    display: none;
+  }
+  .directory-table thead {
+    display: none;
+  }
+  .directory-table tbody {
+    display: grid;
+  }
+  .directory-table tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 18px 16px;
+    border-bottom: 1px solid #e2e8da;
+  }
+  .directory-table tr:last-child {
+    border: 0;
+  }
+  .directory-table td {
+    display: block;
+    padding: 0;
+    border: 0;
+  }
+  .directory-table td:first-child {
+    grid-column: 1/-1;
+  }
+  .directory-table td.directory-demographics {
+    grid-column: 1;
+    align-self: center;
+    padding-left: 46px;
+  }
+  .directory-table td.directory-design {
+    display: none;
+  }
+  .directory-demographics > span,
+  .directory-demographics small {
+    font-size: 10px;
+  }
+  .directory-demographics small {
+    margin-top: 3px;
+  }
+  .directory-person strong {
+    font-size: 14px;
+  }
+  .directory-person .avatar {
+    width: 36px;
+    height: 36px;
+  }
+  .directory-person {
+    gap: 10px;
+  }
+  .directory-actions {
+    gap: 10px;
+  }
+  .directory-view {
+    font-size: 11px;
+    min-height: 44px;
+  }
+  .patient-actions-disclosure summary {
+    width: 44px;
+    height: 44px;
+  }
+}

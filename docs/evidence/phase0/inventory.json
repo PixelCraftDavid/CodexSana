@@ -1,0 +1,425 @@
+{
+  "generatedAt": "2026-10-11T21:32:07.463Z",
+  "runtime": {
+    "node": "v24.21.0",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "packageLockSHA256": "52e0ec3fd0725db85a9da149805205a2ca2d9dc6c492d64ff1fcbad3812b951f",
+  "gitRepositoryPresent": false,
+  "build": {
+    "buildId": "77PuG6Aj6B-B_s6SpLql7",
+    "staticRoutes": [
+      "/",
+      "/conceptos"
+    ],
+    "dynamicRoutes": [
+      "/ficha/[id]/[concept]",
+      "/ficha/[id]",
+      "/conceptos/[concept]"
+    ],
+    "nextDynamicRouteCount": 3,
+    "vercelFunctionCount": null,
+    "vercelEvidenceAvailable": false,
+    "note": "Next route count is not a Vercel function count. No Vercel adapter artifact verified."
+  },
+  "source": {
+    "routeHandlers": [],
+    "serverActionFiles": [],
+    "paymentIntegrationFiles": [],
+    "patientPhotoFiles": [
+      "src/features/dashboard/styles/medical-motion.css",
+      "src/features/patients/components/patient-form-fields.tsx",
+      "src/features/patients/components/patient-form.tsx",
+      "src/features/patients/lib/read-patient-form.ts",
+      "src/features/patients/model/patient.ts",
+      "src/features/patients/styles/patient-form.css",
+      "src/shared/ui/ui.tsx"
+    ],
+    "modules": [
+      {
+        "name": "dashboard",
+        "files": [
+          "src/features/dashboard/components/dashboard-charts.tsx",
+          "src/features/dashboard/components/dashboard-dialogs.tsx",
+          "src/features/dashboard/components/dashboard-overview.tsx",
+          "src/features/dashboard/components/dashboard-records.tsx",
+          "src/features/dashboard/components/dashboard-sidebar.tsx",
+          "src/features/dashboard/components/dashboard-topbar.tsx",
+          "src/features/dashboard/components/dashboard.tsx",
+          "src/features/dashboard/components/medical-motion.tsx",
+          "src/features/dashboard/model/use-dashboard.ts",
+          "src/features/dashboard/styles/analytics.css",
+          "src/features/dashboard/styles/dashboard.css",
+          "src/features/dashboard/styles/medical-motion.css",
+          "src/features/dashboard/styles/shell.css"
+        ]
+      },
+      {
+        "name": "patients",
+        "files": [
+          "src/features/patients/components/patient-actions.ts",
+          "src/features/patients/components/patient-filters-bar.tsx",
+          "src/features/patients/components/patient-form-fields.tsx",
+          "src/features/patients/components/patient-form.tsx",
+          "src/features/patients/components/patient-row-actions.tsx",
+          "src/features/patients/components/patients-directory.tsx",
+          "src/features/patients/lib/read-patient-form.ts",
+          "src/features/patients/model/demographics.ts",
+          "src/features/patients/model/patient-filters.ts",
+          "src/features/patients/model/patient.ts",
+          "src/features/patients/styles/directory.css",
+          "src/features/patients/styles/patient-form.css"
+        ]
+      },
+      {
+        "name": "cards",
+        "files": [
+          "src/features/cards/components/card-export-dialog.tsx",
+          "src/features/cards/components/card-format-picker.tsx",
+          "src/features/cards/components/card-preview.tsx",
+          "src/features/cards/components/card-review-summary.tsx",
+          "src/features/cards/components/card-workshop-dialog.tsx",
+          "src/features/cards/components/cards-library.tsx",
+          "src/features/cards/lib/card-svg.ts",
+          "src/features/cards/lib/companion-card-front.ts",
+          "src/features/cards/lib/printable-card.ts",
+          "src/features/cards/lib/protected-pdf.ts",
+          "src/features/cards/model/card-customization.ts",
+          "src/features/cards/model/card-format.ts",
+          "src/features/cards/styles/card-format.css",
+          "src/features/cards/styles/card-workshop.css",
+          "src/features/cards/styles/cards.css",
+          "src/features/cards/styles/library.css",
+          "src/features/cards/styles/pdf-security.css"
+        ]
+      },
+      {
+        "name": "qr",
+        "files": [
+          "src/features/qr/components/patient-qr.tsx",
+          "src/features/qr/components/qr-presentation-controls.tsx",
+          "src/features/qr/lib/custom-qr.ts",
+          "src/features/qr/lib/kids-qr.ts",
+          "src/features/qr/lib/qr-frames.ts",
+          "src/features/qr/styles/qr-presentation.css"
+        ]
+      },
+      {
+        "name": "designs",
+        "files": [
+          "src/features/designs/components/anatomical-art.tsx",
+          "src/features/designs/components/companion-art.tsx",
+          "src/features/designs/components/companion-design-lab.tsx",
+          "src/features/designs/components/concept-lab.tsx",
+          "src/features/designs/components/kids-art.tsx",
+          "src/features/designs/components/kids-design-lab.tsx",
+          "src/features/designs/components/kids-qr-studio.tsx",
+          "src/features/designs/components/kids-theme-nav.tsx",
+          "src/features/designs/components/patient-design-picker.tsx",
+          "src/features/designs/lib/cat-art.ts",
+          "src/features/designs/lib/companion-art.ts",
+          "src/features/designs/model/kids-themes.ts",
+          "src/features/designs/model/patient-designs.ts",
+          "src/features/designs/styles/companions.css",
+          "src/features/designs/styles/concepts.css",
+          "src/features/designs/styles/kids.css",
+          "src/features/designs/styles/patient-designs.css"
+        ]
+      },
+      {
+        "name": "emergency",
+        "files": [
+          "src/features/emergency/components/companion-emergency-card.tsx",
+          "src/features/emergency/components/emergency-card.tsx",
+          "src/features/emergency/components/emergency-concepts.tsx",
+          "src/features/emergency/components/kids-emergency-card.tsx",
+          "src/features/emergency/components/share-emergency.tsx",
+          "src/features/emergency/styles/companions.css",
+          "src/features/emergency/styles/emergency.css"
+        ]
+      }
+    ],
+    "filesOver300Lines": [
+      {
+        "file": "src/features/cards/components/card-export-dialog.tsx",
+        "lines": 367
+      },
+      {
+        "file": "src/features/cards/styles/card-workshop.css",
+        "lines": 320
+      },
+      {
+        "file": "src/features/cards/styles/cards.css",
+        "lines": 440
+      },
+      {
+        "file": "src/features/dashboard/styles/analytics.css",
+        "lines": 694
+      },
+      {
+        "file": "src/features/dashboard/styles/dashboard.css",
+        "lines": 417
+      },
+      {
+        "file": "src/features/dashboard/styles/medical-motion.css",
+        "lines": 632
+      },
+      {
+        "file": "src/features/dashboard/styles/shell.css",
+        "lines": 630
+      },
+      {
+        "file": "src/features/designs/components/concept-lab.tsx",
+        "lines": 325
+      },
+      {
+        "file": "src/features/designs/styles/companions.css",
+        "lines": 543
+      },
+      {
+        "file": "src/features/designs/styles/concepts.css",
+        "lines": 1499
+      },
+      {
+        "file": "src/features/designs/styles/kids.css",
+        "lines": 1926
+      },
+      {
+        "file": "src/features/emergency/styles/companions.css",
+        "lines": 555
+      },
+      {
+        "file": "src/features/emergency/styles/emergency.css",
+        "lines": 530
+      },
+      {
+        "file": "src/features/patients/styles/directory.css",
+        "lines": 335
+      }
+    ]
+  },
+  "dependencies": [
+    {
+      "name": "lucide-react",
+      "requested": "^0.468.0",
+      "installed": "0.468.0",
+      "license": "ISC",
+      "scope": "production",
+      "files": [
+        {
+          "file": "node_modules/lucide-react/LICENSE",
+          "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+        }
+      ]
+    },
+    {
+      "name": "next",
+      "requested": "^15.5.0",
+      "installed": "15.5.27",
+      "license": "MIT",
+      "scope": "production",
+      "files": [
+        {
+          "file": "node_modules/next/license.md",
+          "sha256": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224"
+        }
+      ]
+    },
+    {
+      "name": "pdfkit",
+      "requested": "^0.20.2",
+      "installed": "0.20.2",
+      "license": "MIT",
+      "scope": "production",
+      "files": [
+        {
+          "file": "node_modules/pdfkit/LICENSE",
+          "sha256": "5f0d5197d2b5d91f41de43143b0be42fb55515bc2b894f2a9b62de9f7056c0f8"
+        }
+      ]
+    },
+    {
+      "name": "qrcode",
+      "requested": "^1.5.4",
+      "installed": "1.5.4",
+      "license": "MIT",
+      "scope": "production",
+      "files": [
+        {
+          "file": "node_modules/qrcode/license",
+          "sha256": "8df47c6ad9ac2c41eb9b2a72def9908959da0ede8dadd56c7b249c1bdb0c5ce6"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "requested": "^19.1.0",
+      "installed": "19.3.0",
+      "license": "MIT",
+      "scope": "production",
+      "files": [
+        {
+          "file": "node_modules/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "requested": "^19.1.0",
+      "installed": "19.3.0",
+      "license": "MIT",
+      "scope": "production",
+      "files": [
+        {
+          "file": "node_modules/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "@tailwindcss/postcss",
+      "requested": "^4.1.0",
+      "installed": "4.3.3",
+      "license": "MIT",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/@tailwindcss/postcss/LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "requested": "^22.0.0",
+      "installed": "22.20.5",
+      "license": "MIT",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/@types/node/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "@types/pdfkit",
+      "requested": "^0.17.6",
+      "installed": "0.17.6",
+      "license": "MIT",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/@types/pdfkit/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "@types/qrcode",
+      "requested": "^1.5.5",
+      "installed": "1.5.6",
+      "license": "MIT",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/@types/qrcode/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "@types/react",
+      "requested": "^19.0.0",
+      "installed": "19.3.0",
+      "license": "MIT",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/@types/react/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "@types/react-dom",
+      "requested": "^19.0.0",
+      "installed": "19.3.0",
+      "license": "MIT",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/@types/react-dom/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "jsqr",
+      "requested": "^1.4.0",
+      "installed": "1.4.0",
+      "license": "Apache-2.0",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/jsqr/LICENSE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+        }
+      ]
+    },
+    {
+      "name": "prettier",
+      "requested": "^3.9.10",
+      "installed": "3.9.10",
+      "license": "MIT",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/prettier/LICENSE",
+          "sha256": "b0f2417199889f1c0d28ec4e0244eacf1a15de5819d61f641dd7d8f45153ac9c"
+        }
+      ]
+    },
+    {
+      "name": "sharp",
+      "requested": "^0.35.5",
+      "installed": "0.35.5",
+      "license": "Apache-2.0",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/sharp/LICENSE",
+          "sha256": "73ba74dfaa520b49a401b5d21459a8523a146f3b7518a833eea5efa85130bf68"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "requested": "^4.1.0",
+      "installed": "4.3.3",
+      "license": "MIT",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/tailwindcss/LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "requested": "^5.7.0",
+      "installed": "5.9.3",
+      "license": "Apache-2.0",
+      "scope": "development",
+      "files": [
+        {
+          "file": "node_modules/typescript/LICENSE.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        }
+      ]
+    }
+  ]
+}

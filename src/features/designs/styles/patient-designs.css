@@ -1,0 +1,149 @@
+.patient-design-picker {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.patient-design-group + .patient-design-group {
+  margin-top: 19px;
+}
+.patient-design-group-label {
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  color: #819077;
+  margin-bottom: 10px;
+}
+.patient-design-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.patient-design-group.cats .patient-design-options,
+.patient-design-group.companions .patient-design-options {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.patient-design-option {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 6px 6px 11px;
+  border: 1px solid #dde5d7;
+  border-radius: 11px;
+  background: #fff;
+  transition:
+    border-color 0.18s,
+    background 0.18s,
+    transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.patient-design-option:hover {
+  border-color: #8ea47e;
+  transform: translateY(-2px);
+}
+.patient-design-option[data-selected='true'] {
+  border-color: #42644a;
+  background: #f0f5e9;
+}
+.patient-design-option:focus-within {
+  outline: 2px solid #d16f4f;
+  outline-offset: 3px;
+}
+.patient-design-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.patient-design-option img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+.patient-design-option-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #344d37;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 10px 5px 4px;
+  gap: 5px;
+}
+.patient-design-check {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #c7d5bc;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+[data-selected='true'] .patient-design-check {
+  background: #42644a;
+  border-color: #42644a;
+  color: #fff;
+}
+.patient-design-option-detail {
+  display: block;
+  color: #7f8e72;
+  font-size: 9px;
+  line-height: 1.5;
+  margin: 0 5px;
+}
+.patient-design-selected {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #536e45;
+  margin-top: 17px;
+}
+.patient-design-chip {
+  display: inline-block;
+  font-size: 8px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  background: #edf2e5;
+  color: #5b7547;
+  margin-top: 5px;
+}
+.public-preview-dialog .design-card,
+.public-preview-dialog .kids-card {
+  width: 100%;
+  border-radius: 0;
+}
+.public-preview-dialog .kids-section-heading h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: normal;
+  margin-top: 0;
+}
+@media (max-width: 420px) {
+  .patient-design-options {
+    gap: 7px;
+  }
+  .patient-design-option {
+    padding: 4px 4px 9px;
+  }
+  .patient-design-option-name {
+    font-size: 10px;
+    margin-inline: 2px;
+  }
+  .patient-design-option-detail {
+    font-size: 8px;
+    margin-inline: 2px;
+  }
+  .patient-design-check {
+    width: 14px;
+    height: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .patient-design-option {
+    transition: none;
+  }
+  .patient-design-option:hover {
+    transform: none;
+  }
+}

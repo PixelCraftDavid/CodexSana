@@ -1,0 +1,126 @@
+/* dialog: extracted from the shared baseline. */
+
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #1c302e66;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: backdrop-in 0.18s ease-out both;
+}
+.dialog {
+  position: relative;
+  width: 460px;
+  max-width: 100%;
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  background: #fdfefb;
+  border-radius: 16px;
+  padding: 38px 34px 30px;
+  outline: none;
+  animation: dialog-in 0.35s var(--ease) both;
+}
+.dialog-close {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  z-index: 2;
+}
+.dialog h2 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -1.3px;
+  margin-top: 10px;
+}
+.dialog-description {
+  font-size: 12px;
+  color: #8e9983;
+  margin-top: 11px;
+}
+.export-icon {
+  width: 49px;
+  height: 49px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #72975a;
+  background: #ecf2e3;
+  margin-bottom: 26px;
+}
+.export-qr {
+  display: flex;
+  justify-content: center;
+  padding: 27px 0;
+}
+.export-buttons {
+  display: flex;
+  gap: 10px;
+}
+.export-buttons .button {
+  flex: 1;
+}
+.export-note {
+  font-size: 10px;
+  color: #939d89;
+  display: block;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+.share-url {
+  width: 100%;
+  background: #f2f5ed;
+  color: #637956;
+  border: 1px solid #e2e8d9;
+  border-radius: 6px;
+  padding: 11px;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+.public-preview-dialog {
+  width: 450px;
+  padding: 0;
+}
+.public-preview-dialog > .dialog-close {
+  top: 10px;
+  right: 9px;
+}
+.help-steps {
+  margin: 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.help-steps .section-title {
+  margin: 0;
+}
+.prototype-note {
+  font-size: 11px;
+  color: #7d8d70;
+  line-height: 1.65;
+  margin-bottom: 23px;
+}
+.dialog-backdrop:has(.form-dialog) {
+  padding: 0;
+}
+@media (max-width: 640px) {
+  .dialog-backdrop {
+    padding: 15px;
+  }
+  .dialog {
+    padding: 35px 23px 24px;
+    max-height: calc(100dvh - 30px);
+  }
+  .dialog h2 {
+    font-size: 28px;
+  }
+  .public-preview-dialog {
+    padding: 0;
+  }
+  .public-preview-dialog .emergency-card {
+    padding-top: 22px;
+  }
+}

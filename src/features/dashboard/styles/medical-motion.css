@@ -1,0 +1,631 @@
+/* CodexSana motion system: arterial flow, double heartbeat and calm clinical rhythm. */
+.motion-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #73836a;
+  border: 1px solid #e3e9dd;
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 9px;
+}
+.motion-toggle:hover {
+  background: #eaf0e3;
+  color: #365842;
+}
+.motion-toggle[aria-pressed='true'] {
+  background: #eaf0e3;
+  border-color: #b3c5a6;
+}
+.anatomical-heart {
+  display: block;
+  width: 100%;
+  height: 195px;
+  overflow: visible;
+}
+.heart-orbit {
+  stroke: #b3c7a4;
+  stroke-width: 0.65;
+  stroke-dasharray: 2 8;
+  transform-origin: 121px 128px;
+  animation: orbit-drift 40s linear infinite;
+}
+.orbit-inner {
+  stroke: #b8cba9;
+  opacity: 0.55;
+  stroke-dasharray: none;
+  animation: orbit-breathe 3.6s ease-in-out infinite;
+}
+.arterial-branches {
+  stroke: #cb7862;
+  stroke-width: 9;
+}
+.arterial-branches .vein-branch {
+  stroke: #7c9e88;
+  stroke-width: 8;
+}
+.arterial-branches .artery-flow {
+  stroke: #f4d4be;
+  stroke-width: 2;
+  stroke-dasharray: 2 17;
+  animation: arterial-flow 3.6s linear infinite;
+}
+.heart-muscle {
+  transform-origin: 120px 143px;
+  animation: double-heartbeat 3.6s ease-in-out infinite;
+}
+.heart-body {
+  fill: #dc8b76;
+  stroke: #c37762;
+  stroke-width: 1.4;
+}
+.heart-lobe {
+  fill: #e4a08b;
+  opacity: 0.78;
+}
+.coronary-vessel {
+  stroke: #bd6c5b;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.coronary-flow {
+  stroke: #f7d5bc;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 12;
+  stroke-linecap: round;
+  animation: arterial-flow 3.6s linear infinite;
+}
+.heart-highlight {
+  stroke: #f2bba5;
+  stroke-width: 5;
+  stroke-linecap: round;
+  opacity: 0.7;
+}
+.anatomy-node {
+  fill: #f6faf0;
+  stroke: #a9bc97;
+  stroke-width: 1;
+  animation: node-breathe 3.6s ease-in-out infinite;
+}
+.node-two {
+  animation-delay: 1.2s;
+}
+.node-three {
+  animation-delay: 2.4s;
+}
+.pulse-trace {
+  display: block;
+  width: 100%;
+  color: #7b9d6f;
+  overflow: visible;
+}
+.pulse-baseline {
+  stroke: currentColor;
+  stroke-width: 1.2;
+  opacity: 0.18;
+}
+.pulse-travel {
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 19 81;
+  animation: pulse-transit 3.6s linear infinite;
+}
+.record-signals {
+  padding: 20px 22px 15px;
+  border: 1px solid #e0e7d7;
+  border-radius: 10px;
+  background: #f0f4e9;
+  animation: care-reveal 0.55s 0.16s var(--ease) both;
+}
+.signals-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #859a72;
+  margin-bottom: 11px;
+}
+.signals-heading > span {
+  font-size: 7px;
+  letter-spacing: 1.1px;
+}
+.record-signals button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 9px;
+  padding: 9px 0;
+  border-bottom: 1px solid #dde7d5;
+}
+.record-signals button > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 1;
+  text-align: left;
+  font-size: 10px;
+  color: #6d845a;
+}
+.record-signals i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.signal-coral {
+  background: #d8957c;
+}
+.signal-green {
+  background: #8ea476;
+}
+.record-signals strong {
+  font-weight: 500;
+  font-size: 17px;
+  color: #6a8455;
+  font-variant-numeric: tabular-nums;
+}
+.record-signals button > svg {
+  color: #9cad8b;
+  transition: transform 0.25s var(--ease);
+}
+.record-signals button:hover > svg {
+  transform: translate(2px, -2px);
+}
+.record-signals button:hover > span {
+  color: #365a38;
+}
+.record-signals p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 7px;
+  color: #9baa8b;
+  margin-top: 10px;
+}
+
+/* Every interaction has a distinct purpose: orient, select, open, connect, deliver. */
+.view-enter {
+  animation: view-arrive 0.38s var(--ease) both;
+}
+.page-heading {
+  animation: care-reveal 0.45s var(--ease) both;
+}
+.workspace-icon > svg,
+.signals-heading > svg {
+  transform-origin: center;
+  animation: icon-heartbeat 3.6s ease-in-out infinite;
+}
+.brand-mark {
+  transition: transform 0.45s var(--ease);
+}
+.sidebar-brand:hover .brand-mark {
+  transform: rotate(0) scale(1.08);
+}
+.nav-item svg {
+  transition: transform 0.3s var(--ease);
+}
+.nav-item:hover svg {
+  transform: translateY(-2px);
+}
+.nav-item.active {
+  box-shadow: inset 2px 0 #90ac7a;
+}
+.nav-item .active-dot {
+  animation: gentle-signal 3.6s ease-out infinite;
+}
+.new-patient svg {
+  transition: transform 0.35s var(--ease);
+}
+.new-patient:hover svg {
+  transform: rotate(90deg);
+}
+.button.primary {
+  transition:
+    transform 0.22s var(--ease),
+    background 0.22s;
+}
+.button.primary:active {
+  transform: translateY(1px) scale(0.97);
+}
+.row-actions .icon-button:nth-child(2):hover svg {
+  animation: download-drop 0.6s var(--ease);
+}
+.row-actions .icon-button:nth-child(3):hover svg {
+  animation: share-connect 0.45s var(--ease);
+}
+.avatar {
+  transition: transform 0.3s var(--ease);
+}
+.photo-upload-preview {
+  transition:
+    background 0.2s,
+    transform 0.25s var(--ease);
+}
+.photo-upload:hover .photo-upload-preview {
+  background: #e2edda;
+  transform: scale(1.05);
+}
+.field input,
+.field textarea,
+.field select {
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  background: #fdfff9;
+}
+.section-title > span {
+  transition: transform 0.3s var(--ease);
+}
+.section-title:hover > span {
+  transform: rotate(-5deg);
+}
+.dialog-backdrop.is-closing {
+  animation: backdrop-dismiss 0.16s ease-in both;
+}
+.is-closing > .dialog {
+  animation: dialog-dismiss 0.16s ease-in both;
+}
+.is-closing > .form-dialog {
+  animation: drawer-dismiss 0.16s ease-in both;
+}
+.emergency-pulse {
+  height: 16px;
+  overflow: hidden;
+  margin-top: 15px;
+  opacity: 0.45;
+}
+.emergency-pulse .pulse-trace {
+  width: 100%;
+  height: 25px;
+}
+.emergency-pulse .pulse-travel {
+  stroke-dasharray: none;
+  animation: public-pulse-arrive 1.2s ease-out 1;
+}
+.emergency-card .emergency-intro {
+  margin-top: 15px;
+}
+.is-preview .emergency-pulse {
+  height: 8px;
+  margin-top: 10px;
+}
+.is-preview .emergency-pulse .pulse-trace {
+  height: 13px;
+}
+.is-preview .emergency-intro {
+  margin-top: 10px;
+}
+.call-button:hover > svg:first-child {
+  animation: contact-ring 0.65s var(--ease);
+}
+.call-button:hover > svg:last-child {
+  transform: translate(2px, -2px);
+}
+.call-button svg {
+  transition: transform 0.25s var(--ease);
+}
+
+@keyframes double-heartbeat {
+  0%,
+  13%,
+  24%,
+  100% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.035);
+  }
+  9% {
+    transform: scale(0.994);
+  }
+  18% {
+    transform: scale(1.025);
+  }
+}
+@keyframes icon-heartbeat {
+  0%,
+  13%,
+  24%,
+  100% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.12);
+  }
+  18% {
+    transform: scale(1.07);
+  }
+}
+@keyframes arterial-flow {
+  to {
+    stroke-dashoffset: -76;
+  }
+}
+@keyframes pulse-transit {
+  from {
+    stroke-dashoffset: 20;
+  }
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+@keyframes orbit-drift {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes orbit-breathe {
+  0%,
+  100% {
+    transform: scale(0.98);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.035);
+    opacity: 0.7;
+  }
+}
+@keyframes node-breathe {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes gentle-signal {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 #91ad7b00;
+  }
+  30% {
+    box-shadow: 0 0 0 4px #91ad7b15;
+  }
+  65% {
+    box-shadow: 0 0 0 7px #91ad7b00;
+  }
+}
+@keyframes clinical-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-7px) rotate(9deg);
+  }
+}
+@keyframes bar-breathe {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.72);
+  }
+}
+@keyframes care-reveal {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes view-arrive {
+  from {
+    opacity: 0.5;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes row-arrive {
+  from {
+    opacity: 0.5;
+    translate: 0 5px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes fiche-switch {
+  from {
+    opacity: 0.65;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes download-drop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(3px);
+  }
+  65% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes share-connect {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.13) rotate(-6deg);
+  }
+}
+@keyframes shield-breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes contact-ring {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-12deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(3deg);
+  }
+}
+@keyframes public-pulse-arrive {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes backdrop-dismiss {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes dialog-dismiss {
+  to {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+}
+@keyframes drawer-dismiss {
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+@media (max-width: 1050px) {
+  .record-signals {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    padding-block: 15px;
+  }
+  .signals-heading {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+  }
+  .record-signals p {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 850px) {
+  .motion-toggle span {
+    display: none;
+  }
+  .motion-toggle {
+    padding: 7px;
+    min-width: 29px;
+    min-height: 29px;
+  }
+}
+@media (max-width: 640px) {
+  .anatomical-heart {
+    height: 161px;
+  }
+  .heart-orbit {
+    opacity: 0.5;
+  }
+  .record-signals {
+    padding: 16px 13px;
+    gap: 0 12px;
+  }
+  .record-signals button > span {
+    font-size: 8px;
+    gap: 5px;
+  }
+  .record-signals button strong {
+    font-size: 15px;
+  }
+  .record-signals button > svg {
+    width: 12px;
+  }
+  .signals-heading > span {
+    font-size: 7px;
+  }
+  .record-signals p {
+    font-size: 6px;
+  }
+  .topbar-right {
+    gap: 9px;
+  }
+  .demo-chip {
+    font-size: 8px;
+  }
+  .motion-toggle {
+    padding: 6px;
+  }
+  .breadcrumb strong {
+    font-size: 9px;
+  }
+}
+@media (max-width: 360px) {
+  .record-signals {
+    gap: 0 8px;
+  }
+  .record-signals button > span {
+    font-size: 7px;
+  }
+}
+
+/* Pause at the current visual frame. Reduced motion also makes all entrances immediate. */
+[data-motion='paused'] *,
+[data-motion='paused'] *::before,
+[data-motion='paused'] *::after {
+  animation-play-state: paused !important;
+}
+[data-motion='paused'] .view-enter,
+[data-motion='paused'] .page-heading,
+[data-motion='paused'] .record-signals,
+[data-motion='paused'] .dialog,
+[data-motion='paused'] .dialog-backdrop,
+[data-motion='paused'] .toast {
+  animation: none !important;
+}
+[data-motion='paused'] button,
+[data-motion='paused'] a,
+[data-motion='paused'] svg,
+[data-motion='paused'] .avatar {
+  transition-duration: 0.01ms !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .pulse-travel {
+    stroke-dasharray: none;
+    opacity: 0.45;
+  }
+}

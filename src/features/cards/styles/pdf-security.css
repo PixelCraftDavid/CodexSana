@@ -1,0 +1,222 @@
+.card-format-options button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.qr-studio-downloads,
+.kids-qr-downloads {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.pdf-security {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #dce4d7;
+  border-radius: 14px;
+  background: #f6f8f0;
+  animation: card-dialog-enter 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pdf-security-heading {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  color: #365745;
+}
+.pdf-security-heading strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.pdf-security-heading p {
+  font-size: 10px;
+  margin-top: 4px;
+  color: #63745f;
+}
+.pdf-security > label {
+  display: block;
+  margin-top: 18px;
+  font-size: 10px;
+  color: #52694f;
+}
+.pdf-password-row {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+  background: #fffef9;
+  border: 1px solid #cbd8c2;
+  border-radius: 8px;
+  padding: 2px;
+}
+.pdf-password-row input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  font:
+    12px Consolas,
+    monospace;
+  background: transparent;
+  color: #244a3d;
+}
+.pdf-password-row button {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  color: #42684a;
+  flex-shrink: 0;
+}
+.pdf-password-row button:hover {
+  background: #edf2e7;
+}
+.pdf-password-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  color: #566f52;
+  margin-top: 6px;
+}
+.pdf-password-meta button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 36px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pdf-security-scope {
+  font-size: 10px;
+  line-height: 1.65;
+  color: #53644f;
+  margin-top: 8px;
+}
+.pdf-share-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 46px;
+  border-radius: 8px;
+  border: 1px solid #bbcfb3;
+  margin-top: 17px;
+  color: #2a533b;
+  background: #fffef9;
+  font-size: 12px;
+}
+.pdf-share-action:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.pdf-share-action:not(:disabled):hover {
+  background: #e6eddc;
+}
+.pdf-share-hint {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: #63745f;
+  margin-top: 8px;
+}
+.pdf-download-copy {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  margin-top: 6px;
+  font-size: 10px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pdf-format-warning {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #63745f;
+}
+.sidebar-brand .brand {
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+.sidebar-brand .brand-mark {
+  margin-right: 7px;
+  width: 28px;
+  height: 28px;
+}
+.emergency-header .brand-card {
+  font-size: 19px;
+  white-space: nowrap;
+}
+.emergency-header .public-pill {
+  white-space: nowrap;
+}
+.phone-content .brand-card {
+  font-size: 13px;
+  letter-spacing: -0.7px;
+}
+.phone-content .brand-card .brand-mark {
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+.phone-content .public-pill {
+  font-size: 5px;
+  padding: 4px;
+}
+.design-header .design-brand,
+.kids-card-header .kids-wordmark {
+  font-size: 22px;
+  white-space: nowrap;
+}
+.design-header,
+.kids-card-header {
+  flex-wrap: wrap;
+}
+.design-header .design-document,
+.kids-card-header .kids-id {
+  margin-left: auto;
+}
+.kids-card-preview .kids-wordmark,
+.design-preview .design-brand {
+  font-size: 19px;
+}
+@media (max-width: 560px) {
+  .pdf-security {
+    padding: 16px;
+  }
+  .pdf-password-row input {
+    font-size: 10px;
+    padding: 8px;
+  }
+  .pdf-password-row button {
+    width: 36px;
+  }
+  .pdf-password-meta {
+    font-size: 9px;
+  }
+  .card-format-options {
+    flex-basis: 100%;
+  }
+  .card-download-action,
+  .card-print-action {
+    flex: 1;
+    width: auto;
+  }
+  .emergency-header {
+    flex-wrap: wrap;
+  }
+  .emergency-header .public-pill {
+    margin-left: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pdf-security {
+    animation: none;
+  }
+}

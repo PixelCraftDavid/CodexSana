@@ -1,0 +1,416 @@
+/* Dashboard layout: summary, directory and delivery are separate workspaces. */
+.organized-dashboard .sidebar {
+  width: 236px;
+  padding: 30px 18px 0;
+}
+.organized-dashboard .main-shell {
+  margin-left: 236px;
+}
+.organized-dashboard .sidebar-brand {
+  padding: 0 8px 30px;
+}
+.organized-dashboard .sidebar-brand .brand {
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+.organized-dashboard .workspace {
+  margin-bottom: 28px;
+}
+.organized-dashboard .nav-item,
+.organized-dashboard .concepts-sidebar-link {
+  font-size: 12px;
+  min-height: 44px;
+}
+.studio-nav-label {
+  margin-top: 30px;
+}
+.organized-dashboard .sidebar-message {
+  background: transparent;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  padding: 24px 10px 0;
+}
+.organized-dashboard .message-illustration {
+  display: none;
+}
+.organized-dashboard .sidebar-message h3 {
+  font-size: 16px;
+}
+.organized-dashboard .sidebar-message p {
+  color: #69766b;
+}
+.organized-dashboard .topbar {
+  height: 68px;
+  padding-inline: 36px;
+}
+.organized-dashboard .dashboard-content {
+  max-width: 1420px;
+  padding: 34px 36px 24px;
+}
+.organized-dashboard .page-heading {
+  margin-bottom: 32px;
+}
+.organized-dashboard .page-heading h1 {
+  font-size: clamp(30px, 3vw, 42px);
+  letter-spacing: -1.6px;
+  font-weight: 550;
+}
+.organized-dashboard .page-heading p {
+  font-size: 13px;
+  color: #68756c;
+  line-height: 1.6;
+}
+.organized-dashboard .new-patient {
+  background: var(--green);
+  margin-top: 0;
+  min-height: 44px;
+  font-size: 12px;
+}
+.organized-dashboard .new-patient:hover {
+  background: #173d30;
+}
+.organized-dashboard .eyebrow {
+  color: #677d6b;
+  font-size: 9px;
+}
+.overview-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.1fr;
+  border-block: 1px solid #dfe5dc;
+  margin-bottom: 34px;
+}
+.overview-stat {
+  padding: 28px 22px 26px 0;
+}
+.overview-stat + .overview-stat {
+  border-left: 1px solid #dfe5dc;
+  padding-left: 28px;
+}
+.overview-stat-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  color: #627467;
+}
+.overview-stat-label svg {
+  color: #819781;
+}
+.overview-stat-value {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 49px;
+  letter-spacing: -2.7px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.overview-stat-value small {
+  font-size: 11px;
+  letter-spacing: 0;
+  color: #637566;
+}
+.overview-stat p {
+  font-size: 10px;
+  color: #69756a;
+  line-height: 1.5;
+}
+.overview-stat button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 11px;
+  padding: 0;
+  color: #446952;
+}
+.overview-anatomy {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 0 14px 20px;
+  border-left: 1px solid #dfe5dc;
+  overflow: hidden;
+}
+.overview-anatomy .anatomical-heart {
+  width: 116px;
+  height: 145px;
+  flex-shrink: 0;
+}
+.overview-anatomy > div {
+  flex: 1;
+}
+.overview-anatomy span {
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: #697d66;
+}
+.overview-anatomy strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1.15;
+  letter-spacing: -0.7px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.overview-anatomy .pulse-trace {
+  width: 120px;
+  height: 24px;
+}
+.workspace-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.section-overline {
+  display: block;
+  font:
+    9px Consolas,
+    monospace;
+  letter-spacing: 1.2px;
+  color: #687f6b;
+  margin-bottom: 8px;
+}
+.workspace-section-heading h2 {
+  font-size: 21px;
+  letter-spacing: -0.65px;
+  font-weight: 500;
+}
+.section-context {
+  font-size: 10px;
+  color: #6c786d;
+}
+.organized-dashboard .analytics-grid {
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 32px;
+}
+.organized-dashboard .analytics-card {
+  padding: 22px 20px 16px;
+  border-radius: 12px;
+}
+.organized-dashboard .analytics-eyebrow {
+  font-size: 8px;
+  color: #647d60;
+  letter-spacing: 1px;
+}
+.organized-dashboard .analytics-heading h3 {
+  font-size: 16px;
+  color: #284a36;
+}
+.organized-dashboard .analytics-subhead,
+.organized-dashboard .chart-tooltip {
+  font-size: 10px;
+  color: #63755f;
+}
+.organized-dashboard .analytics-subhead small,
+.organized-dashboard .chart-period {
+  font-size: 9px;
+  color: #64775e;
+}
+.organized-dashboard .chart-footnote {
+  font-size: 9px;
+  color: #64705d;
+}
+.organized-dashboard .age-bar-label strong {
+  font-size: 11px;
+  color: #48613d;
+}
+.organized-dashboard .age-bar-label small,
+.organized-dashboard .age-bar-count small {
+  font-size: 9px;
+  color: #697760;
+}
+.organized-dashboard .age-bars {
+  gap: 18px;
+}
+.organized-dashboard .age-bar-label {
+  width: 102px;
+}
+.organized-dashboard .sex-legend button {
+  font-size: 10px;
+  color: #506944;
+}
+.organized-dashboard .sex-legend button > span,
+.organized-dashboard .sex-legend button > small {
+  font-size: 9px;
+  color: #65755b;
+}
+.organized-dashboard .donut-center span {
+  font-size: 10px;
+  color: #64775b;
+}
+.overview-bottom {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 34px;
+}
+.recent-patients {
+  min-width: 0;
+}
+.text-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  font-size: 11px;
+  color: #48664c;
+}
+.recent-list {
+  border-top: 1px solid #dfe5dc;
+}
+.recent-patient {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 13px;
+  text-align: left;
+  padding: 16px 4px;
+  border-bottom: 1px solid #e2e8df;
+}
+.recent-patient:hover {
+  background: #eff3eb;
+}
+.recent-patient > span:nth-child(2) {
+  flex: 1;
+}
+.recent-patient strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+.recent-patient small {
+  display: block;
+  font-size: 10px;
+  color: #69756a;
+  margin-top: 5px;
+}
+.recent-blood {
+  font-size: 17px;
+  font-weight: 600;
+  color: #496c51;
+  margin-right: 8px;
+}
+.recent-patient > svg {
+  color: #73866e;
+}
+.overview-signals .record-signals {
+  border-radius: 12px;
+  padding: 21px;
+}
+.overview-signals .signals-heading > span {
+  font-size: 8px;
+  color: #62795b;
+}
+.overview-signals .record-signals button > span {
+  font-size: 11px;
+  color: #526d43;
+}
+.overview-signals .record-signals p {
+  font-size: 9px;
+  color: #657659;
+}
+.organized-dashboard .dashboard-footer {
+  margin-top: 30px;
+  border-top: 1px solid #dfe5dc;
+  font-size: 10px;
+  color: #63735f;
+}
+@media (max-width: 1150px) {
+  .organized-dashboard .dashboard-content {
+    padding-inline: 26px;
+  }
+  .organized-dashboard .topbar {
+    padding-inline: 26px;
+  }
+  .overview-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+  .overview-anatomy {
+    display: none;
+  }
+  .organized-dashboard .analytics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .organized-dashboard .revenue-chart {
+    grid-column: 1/-1;
+  }
+  .organized-dashboard .revenue-chart-plot {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+@media (max-width: 800px) {
+  .overview-bottom {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .organized-dashboard .main-shell {
+    margin-left: 0;
+  }
+  .organized-dashboard .sidebar {
+    width: 250px;
+  }
+  .organized-dashboard .dashboard-content {
+    padding: 26px 20px;
+  }
+  .organized-dashboard .topbar {
+    padding-inline: 20px;
+    height: 60px;
+  }
+  .organized-dashboard .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .organized-dashboard .page-heading h1 {
+    font-size: 35px;
+  }
+  .organized-dashboard .new-patient {
+    align-self: flex-start;
+  }
+  .overview-stat {
+    padding: 22px 10px 22px 0;
+  }
+  .overview-stat + .overview-stat {
+    padding-left: 18px;
+  }
+  .overview-stat-value {
+    font-size: 40px;
+  }
+  .overview-stat-label {
+    font-size: 10px;
+  }
+  .overview-stat-label svg {
+    width: 15px;
+  }
+  .overview-stat p {
+    font-size: 9px;
+  }
+  .overview-stat button {
+    font-size: 10px;
+  }
+  .organized-dashboard .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+  .organized-dashboard .revenue-chart {
+    grid-column: auto;
+  }
+  .workspace-section-heading h2 {
+    font-size: 21px;
+  }
+  .section-context {
+    display: none;
+  }
+  .organized-dashboard .dashboard-footer {
+    align-items: flex-start;
+  }
+  .organized-dashboard .dashboard-footer > span:last-child {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+}

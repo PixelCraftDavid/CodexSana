@@ -1,0 +1,319 @@
+.card-workshop-dialog {
+  width: min(1120px, calc(100vw - 32px));
+}
+.card-workshop-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 28px 34px 23px;
+  position: relative;
+  border-bottom: 1px solid #e3e9dd;
+}
+.card-workshop-heading h2 {
+  font-size: 28px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 7px 30px 8px 0;
+}
+.card-workshop-heading p {
+  font-size: 11px;
+  color: #7b8876;
+}
+.card-workshop-grid {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+}
+.card-workshop-controls {
+  padding: 26px 28px 25px 34px;
+  border-right: 1px solid #e3e9dd;
+}
+.card-workshop-controls > h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 21px;
+}
+.card-workshop-controls > h3 > span {
+  font-size: 9px;
+  background: #edf2e7;
+  color: #7b9270;
+  border-radius: 6px;
+  padding: 7px;
+}
+.card-workshop-preview {
+  padding: 27px 30px;
+  align-self: start;
+  position: sticky;
+  top: 0;
+  background: #f7f9f1;
+}
+.workshop-preview-label {
+  display: flex;
+  justify-content: space-between;
+  font:
+    8px Consolas,
+    monospace;
+  letter-spacing: 1px;
+  color: #77866c;
+}
+.workshop-live-dot {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.workshop-live-dot:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #6d9664;
+}
+.card-workshop-preview .card-preview-stage {
+  padding-top: 20px;
+}
+.card-workshop-preview .card-face {
+  box-shadow: 0 9px 30px #2b483519;
+}
+.workshop-control {
+  padding: 20px 0 0;
+  margin-top: 17px;
+  border: 0;
+  border-top: 1px solid #e3e9dd;
+}
+.workshop-control legend {
+  float: left;
+  width: 100%;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: #84947a;
+  margin-bottom: 11px;
+}
+.workshop-control > div {
+  clear: both;
+}
+.workshop-segment {
+  display: flex;
+  padding: 3px;
+  border: 1px solid #dbe4d5;
+  border-radius: 8px;
+}
+.workshop-segment button {
+  min-height: 39px;
+  border-radius: 5px;
+  flex: 1;
+  font-size: 11px;
+  color: #75846c;
+}
+.workshop-segment button[aria-pressed='true'] {
+  color: #35513b;
+  background: #eaf1e1;
+}
+.workshop-inks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+.workshop-inks button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 39px;
+  font-size: 10px;
+  color: #66765c;
+}
+.workshop-inks i {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: #fff;
+  border: 1px solid #34534222;
+}
+.workshop-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 49px;
+  border-bottom: 1px solid #e3e9dd;
+  font-size: 11px;
+  color: #637457;
+}
+.workshop-toggle input {
+  width: 17px;
+  height: 17px;
+  accent-color: #42644a;
+}
+.workshop-qr-proof {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin-top: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #dce5d6;
+}
+.workshop-qr-proof img {
+  width: 115px;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.workshop-qr-proof > div > span {
+  font:
+    7px Consolas,
+    monospace;
+  letter-spacing: 1.1px;
+  color: #8c9c7a;
+}
+.workshop-qr-proof h3 {
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  margin: 10px 0 8px;
+}
+.workshop-qr-proof p {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #7a8970;
+}
+.workshop-session-note {
+  font-size: 9px;
+  line-height: 1.6;
+  color: #8a9880;
+  margin-top: 24px;
+}
+.card-workshop-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fffef9;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  padding: 18px 34px;
+  border-top: 1px solid #e3e9dd;
+}
+.card-workshop-footer > span {
+  color: #8a987b;
+  font-size: 10px;
+}
+.card-workshop-footer > div {
+  display: flex;
+  gap: 10px;
+}
+.card-workshop-footer .button {
+  min-height: 44px;
+}
+.card-workshop-dialog button {
+  transition:
+    background 0.15s,
+    transform 0.15s;
+}
+.card-workshop-dialog button:active {
+  transform: scale(0.98);
+}
+.card-workshop-dialog .card-flip-button:active {
+  transform: none;
+}
+.personalize-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: 1px solid #d1ddc6;
+  border-radius: 8px;
+  padding: 13px;
+  margin-top: 18px;
+  font-size: 11px;
+  color: #44603c;
+  background: #f5f8ef;
+}
+.personalize-form-button:hover {
+  background: #eaf1df;
+}
+.patient-custom-qr {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+.large-qr .patient-custom-qr {
+  max-height: 165px;
+  width: auto;
+  max-width: 132px;
+}
+.concepts-dashboard-entry > button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #51723c;
+  font-size: 11px;
+  margin-left: auto;
+  min-height: 42px;
+}
+@media (max-width: 800px) {
+  .card-workshop-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-workshop-preview {
+    position: static;
+    order: -1;
+    padding: 22px;
+  }
+  .card-workshop-preview .card-flip-button {
+    max-width: 390px;
+  }
+  .card-workshop-preview .card-flip-caption {
+    max-width: 390px;
+  }
+  .card-workshop-controls {
+    padding: 24px;
+    border-right: 0;
+  }
+  .workshop-qr-proof {
+    max-width: 390px;
+    margin-inline: auto;
+  }
+  .workshop-qr-proof img {
+    width: 85px;
+    max-height: 110px;
+  }
+  .workshop-session-note {
+    margin-top: 12px;
+  }
+  .card-workshop-heading {
+    padding: 24px 22px 20px;
+  }
+  .card-workshop-heading h2 {
+    font-size: 23px;
+  }
+  .card-workshop-heading .card-export-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .card-workshop-footer {
+    padding: 13px 20px;
+  }
+  .card-workshop-footer > span {
+    display: none;
+  }
+  .card-workshop-footer > div {
+    width: 100%;
+  }
+  .card-workshop-footer .button {
+    flex: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-workshop-dialog button {
+    transition: none;
+  }
+  .card-workshop-dialog button:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,693 @@
+/* Analytics uses recorded values. Empty categories remain visible as zero. */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr 1.08fr;
+  gap: 17px;
+  margin-bottom: 30px;
+}
+.analytics-card {
+  min-width: 0;
+  padding: 21px 20px 15px;
+  background: #fff;
+  border: 1px solid #e4eade;
+  border-radius: 10px;
+  animation: care-reveal 0.45s var(--ease) both;
+}
+.analytics-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.analytics-heading > svg {
+  color: #95a786;
+}
+.analytics-eyebrow {
+  display: block;
+  font-size: 6px;
+  letter-spacing: 1.3px;
+  color: #a0ae90;
+  margin-bottom: 7px;
+}
+.analytics-heading h3 {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: #516a43;
+}
+.chart-period {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 7px;
+  color: #91a180;
+  background: #f3f6ee;
+  padding: 5px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.analytics-subhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #95a486;
+  margin-top: 15px;
+}
+.analytics-subhead small {
+  font-size: 7px;
+  color: #adb69f;
+}
+.age-bars {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.age-bar-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-align: left;
+  padding: 0;
+  border-radius: 5px;
+}
+.age-bar-label {
+  width: 91px;
+  flex-shrink: 0;
+}
+.age-bar-label strong {
+  display: block;
+  font-size: 9px;
+  color: #6a805b;
+  font-weight: 500;
+}
+.age-bar-label small {
+  display: block;
+  font-size: 7px;
+  color: #a3ad96;
+  margin-top: 4px;
+}
+.age-track {
+  display: block;
+  flex: 1;
+  height: 7px;
+  border-radius: 4px;
+  background: #f2f5ed;
+  overflow: hidden;
+}
+.age-track > span {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  transform-origin: left;
+  animation: chart-bar-in 0.6s var(--ease) both;
+  transition: width 0.45s var(--ease);
+}
+.age-bar-count {
+  width: 25px;
+  text-align: right;
+  font-size: 13px;
+  color: #789164;
+  font-variant-numeric: tabular-nums;
+}
+.age-bar-count small {
+  display: block;
+  color: #a2ae94;
+  font-size: 7px;
+  margin-top: 3px;
+}
+.age-bar-row:hover .age-bar-label strong {
+  color: #254e38;
+}
+.age-bar-row:hover .age-track {
+  background: #e8eddf;
+}
+.chart-footnote {
+  font-size: 7px;
+  line-height: 1.6;
+  color: #a6b09a;
+  margin-top: 17px;
+  padding-top: 12px;
+  border-top: 1px solid #edf1e7;
+}
+.chart-footnote > span {
+  color: #879a74;
+}
+.sex-chart-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 13px;
+}
+.donut-wrap {
+  position: relative;
+  width: 138px;
+  height: 138px;
+  margin-bottom: 13px;
+}
+.sex-donut {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.donut-segment {
+  transition:
+    stroke-width 0.2s var(--ease),
+    stroke-dasharray 0.45s var(--ease),
+    stroke-dashoffset 0.45s var(--ease);
+}
+.donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.donut-center strong {
+  font-size: 29px;
+  font-weight: 500;
+  color: #526f42;
+  letter-spacing: -1px;
+  font-variant-numeric: tabular-nums;
+}
+.donut-center span {
+  font-size: 8px;
+  color: #97a687;
+  margin-top: 3px;
+}
+.sex-legend {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px 13px;
+}
+.sex-legend button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: left;
+  padding: 0;
+}
+.sex-legend i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.sex-legend button > span {
+  flex: 1;
+  font-size: 8px;
+  color: #839572;
+}
+.sex-legend strong {
+  font-size: 10px;
+  font-weight: 500;
+  color: #6b8559;
+}
+.sex-legend small {
+  font-size: 6px;
+  color: #a9b39d;
+}
+.sex-legend button:hover > span {
+  color: #345d3a;
+}
+.revenue-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 19px;
+}
+.revenue-topline > strong {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+  color: #5e7c4b;
+}
+.revenue-topline small {
+  font-size: 8px;
+  font-weight: 400;
+  color: #9dac8e;
+  letter-spacing: 0;
+}
+.revenue-topline > span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 7px;
+  color: #8ca578;
+}
+.revenue-chart-plot {
+  margin-top: 12px;
+  position: relative;
+}
+.revenue-chart-plot > svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+.chart-axis {
+  fill: #a2ad94;
+  font:
+    8px Arial,
+    sans-serif;
+}
+.revenue-line {
+  stroke-dasharray: 500;
+  animation: chart-line-in 1s var(--ease) both;
+}
+.chart-area {
+  animation: backdrop-in 0.6s ease-out both;
+}
+.revenue-day-controls {
+  position: absolute;
+  inset: 0;
+}
+.revenue-day-controls button {
+  position: absolute;
+  left: var(--point-x);
+  top: 0;
+  bottom: 15%;
+  width: 10%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+.revenue-day-controls button:hover {
+  background: #91ac7009;
+}
+.revenue-day-controls button:active {
+  transform: translateX(-50%);
+}
+.chart-tooltip {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #a1ad93;
+  background: #f5f8ef;
+  border-radius: 4px;
+  padding: 7px 9px;
+  margin-top: 5px;
+}
+.chart-tooltip strong {
+  font-weight: 500;
+  color: #75925c;
+}
+.field-hint {
+  display: block;
+  font-size: 9px;
+  margin-top: 7px;
+  line-height: 1.5;
+  color: #a1ac96;
+}
+@keyframes chart-bar-in {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1 1;
+  }
+}
+@keyframes chart-line-in {
+  from {
+    stroke-dashoffset: 500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@media (max-width: 1280px) {
+  .analytics-grid {
+    gap: 12px;
+  }
+  .analytics-card {
+    padding: 18px 15px 14px;
+  }
+  .analytics-heading h3 {
+    font-size: 13px;
+  }
+  .age-bar-label {
+    width: 77px;
+  }
+  .age-bar-label strong {
+    font-size: 8px;
+  }
+  .age-bar-label small {
+    font-size: 6px;
+  }
+  .age-bar-row {
+    gap: 6px;
+  }
+  .age-bars {
+    gap: 16px;
+  }
+  .sex-legend {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .donut-wrap {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 13px;
+  }
+  .sex-legend button > span {
+    font-size: 8px;
+  }
+  .chart-period {
+    font-size: 6px;
+  }
+  .analytics-subhead small {
+    display: none;
+  }
+  .analytics-eyebrow {
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
+  .revenue-chart-plot {
+    margin-top: 26px;
+  }
+  .chart-footnote {
+    font-size: 6px;
+  }
+}
+@media (max-width: 1050px) {
+  .analytics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .revenue-chart {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+  }
+  .revenue-chart .analytics-heading {
+    grid-column: 1;
+  }
+  .revenue-topline {
+    grid-column: 1;
+  }
+  .revenue-chart-plot {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    margin-top: 0;
+  }
+  .revenue-chart .chart-tooltip {
+    grid-column: 1;
+    align-self: end;
+  }
+  .revenue-chart .chart-footnote {
+    grid-column: 1 / -1;
+  }
+  .analytics-eyebrow {
+    font-size: 6px;
+  }
+  .analytics-heading h3 {
+    font-size: 14px;
+  }
+  .age-bar-label {
+    width: 95px;
+  }
+  .age-bar-label strong {
+    font-size: 9px;
+  }
+  .age-bar-label small {
+    font-size: 7px;
+  }
+  .sex-legend {
+    grid-template-columns: 1fr 1fr;
+  }
+  .donut-wrap {
+    width: 139px;
+    height: 139px;
+  }
+  .sex-legend button > span {
+    font-size: 7px;
+  }
+}
+@media (max-width: 640px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .analytics-card {
+    padding: 20px 18px 15px;
+  }
+  .revenue-chart {
+    display: block;
+  }
+  .revenue-chart-plot {
+    margin-top: 15px;
+  }
+  .analytics-heading h3 {
+    font-size: 16px;
+  }
+  .analytics-eyebrow {
+    font-size: 6px;
+  }
+  .chart-period {
+    font-size: 8px;
+  }
+  .revenue-topline > strong {
+    font-size: 27px;
+  }
+  .revenue-topline > span {
+    font-size: 9px;
+  }
+  .chart-tooltip {
+    font-size: 9px;
+  }
+  .chart-footnote {
+    font-size: 8px;
+  }
+  .analytics-subhead {
+    font-size: 9px;
+  }
+  .analytics-subhead small {
+    display: block;
+    font-size: 7px;
+  }
+  .age-bar-label {
+    width: 113px;
+  }
+  .age-bar-label strong {
+    font-size: 11px;
+  }
+  .age-bar-label small {
+    font-size: 8px;
+  }
+  .age-bar-count {
+    font-size: 15px;
+    width: 28px;
+  }
+  .age-bar-count small {
+    font-size: 8px;
+  }
+  .age-bars {
+    gap: 17px;
+  }
+  .age-track {
+    height: 9px;
+  }
+  .sex-chart-body {
+    flex-direction: row;
+    gap: 13px;
+    margin-block: 21px 15px;
+  }
+  .donut-wrap {
+    width: 124px;
+    height: 124px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .sex-legend {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .sex-legend button > span {
+    font-size: 9px;
+  }
+  .sex-legend small {
+    font-size: 7px;
+  }
+  .sex-legend strong {
+    font-size: 11px;
+  }
+  .row-actions .icon-button {
+    min-width: 22px;
+    padding: 3px;
+  }
+  .row-actions .icon-button svg {
+    width: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .donut-wrap {
+    width: 112px;
+    height: 112px;
+  }
+  .sex-chart-body {
+    gap: 9px;
+  }
+  .sex-legend button > span {
+    font-size: 8px;
+  }
+  .age-bar-label {
+    width: 104px;
+  }
+  .age-bar-label strong {
+    font-size: 10px;
+  }
+}
+/* Keep chart labels readable at all widths, including compact desktop panels. */
+.analytics-heading h3 {
+  font-size: 16px;
+  color: #354f39;
+}
+.analytics-eyebrow {
+  font-size: 9px;
+  color: #65745d;
+  letter-spacing: 1px;
+}
+.chart-period {
+  font-size: 10px;
+  color: #526446;
+}
+.analytics-subhead {
+  font-size: 11px;
+  color: #65745d;
+}
+.analytics-subhead small {
+  font-size: 10px;
+  color: #65745d;
+}
+.age-bar-row {
+  min-height: 41px;
+}
+.age-bar-label {
+  width: 111px;
+}
+.age-bar-label strong {
+  font-size: 12px;
+  color: #435b38;
+}
+.age-bar-label small {
+  font-size: 10px;
+  color: #65745d;
+}
+.age-bar-count {
+  font-size: 16px;
+  color: #435b38;
+}
+.age-bar-count small {
+  font-size: 10px;
+  color: #65745d;
+}
+.chart-footnote {
+  font-size: 10px;
+  color: #65745d;
+}
+.chart-footnote > span {
+  color: #526446;
+}
+.donut-center span {
+  font-size: 10px;
+  color: #65745d;
+}
+.sex-legend button {
+  min-height: 26px;
+}
+.sex-legend button > span {
+  font-size: 10px;
+  color: #526446;
+}
+.sex-legend strong {
+  font-size: 12px;
+  color: #435b38;
+}
+.sex-legend small {
+  font-size: 9px;
+  color: #65745d;
+}
+.revenue-topline small,
+.revenue-topline > span {
+  font-size: 10px;
+  color: #526446;
+}
+.chart-axis {
+  fill: #65745d;
+  font-size: 10px;
+}
+.chart-tooltip {
+  font-size: 11px;
+  color: #65745d;
+}
+.chart-tooltip strong {
+  color: #435b38;
+}
+.field-hint {
+  font-size: 11px;
+  color: #65745d;
+}
+@media (min-width: 641px) and (max-width: 1280px) {
+  .analytics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .revenue-chart {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+  }
+  .revenue-chart .analytics-heading,
+  .revenue-topline {
+    grid-column: 1;
+  }
+  .revenue-chart-plot {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    margin-top: 0;
+  }
+  .revenue-chart .chart-tooltip {
+    grid-column: 1;
+    align-self: end;
+  }
+  .revenue-chart .chart-footnote {
+    grid-column: 1 / -1;
+  }
+  .sex-legend {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .analytics-card {
+    padding-inline: 18px;
+  }
+  .sex-legend {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .sex-legend button > span {
+    font-size: 10px;
+  }
+}
+[data-motion='paused'] .analytics-card,
+[data-motion='paused'] .age-track > span,
+[data-motion='paused'] .revenue-line,
+[data-motion='paused'] .chart-area {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .analytics-card,
+  .age-track > span,
+  .revenue-line,
+  .chart-area {
+    animation: none !important;
+  }
+  .age-track > span,
+  .donut-segment {
+    transition-duration: 0.01ms !important;
+  }
+}

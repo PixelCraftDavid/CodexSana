@@ -1,0 +1,22 @@
+/* Global cascade entry point. Keep the import order: foundation, features, workspace. */
+@import '../shared/styles/base.css';
+@import '../shared/styles/ui.css';
+@import '../features/dashboard/styles/shell.css';
+@import '../features/emergency/styles/emergency.css';
+@import '../shared/styles/dialog.css';
+@import '../features/patients/styles/patient-form.css';
+@import '../features/dashboard/styles/medical-motion.css';
+@import '../features/dashboard/styles/analytics.css';
+@import '../features/designs/styles/concepts.css';
+@import '../features/designs/styles/kids.css';
+@import '../features/designs/styles/companions.css';
+@import '../features/emergency/styles/companions.css';
+@import '../features/cards/styles/cards.css';
+@import '../features/designs/styles/patient-designs.css';
+@import '../features/cards/styles/card-workshop.css';
+@import '../features/cards/styles/pdf-security.css';
+@import '../features/qr/styles/qr-presentation.css';
+@import '../features/cards/styles/card-format.css';
+@import '../features/dashboard/styles/dashboard.css';
+@import '../features/patients/styles/directory.css';
+@import '../features/cards/styles/library.css';

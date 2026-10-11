@@ -1,0 +1,542 @@
+.nutria-perla {
+  --kids-bg: #f2f8f7;
+  --kids-paper: #fffdf8;
+  --kids-ink: #28545d;
+  --kids-muted: #59767a;
+  --kids-accent: #28545d;
+  --kids-soft: #d9ecea;
+  --kids-line: #bfd7d6;
+  --kids-warm: #c3856c;
+  --kids-qr-ink: #28545d;
+  --kids-font: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --study-ink: #28545d;
+  --study-panel: #fffdf8;
+  --study-line: #bfd7d6;
+  --comp-peach: #f5d2c1;
+  --comp-fur: #a77b5f;
+}
+.capibara-salvia {
+  --kids-bg: #f4f5f8;
+  --kids-paper: #fffaf2;
+  --kids-ink: #304867;
+  --kids-muted: #62718a;
+  --kids-accent: #304867;
+  --kids-soft: #dde6f2;
+  --kids-line: #c3cede;
+  --kids-warm: #b77b59;
+  --kids-qr-ink: #304867;
+  --kids-font: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --study-ink: #304867;
+  --study-panel: #fffaf2;
+  --study-line: #c3cede;
+  --comp-peach: #f0c6a2;
+  --comp-fur: #bb946a;
+}
+.companion-study {
+  padding-inline: clamp(20px, 3vw, 64px);
+}
+.companion-study .kids-study-header {
+  min-height: 100px;
+}
+.kids-study-header nav {
+  flex-wrap: wrap;
+}
+.kids-study-header nav a small {
+  font-size: 8px;
+  opacity: 0.65;
+}
+.companion-study .kids-study-brand small {
+  font-size: 7px;
+  letter-spacing: 1.2px;
+}
+.companion-workshop-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.25fr) minmax(310px, 1fr) minmax(250px, 0.82fr);
+  gap: clamp(28px, 3.6vw, 65px);
+  max-width: 1480px;
+  margin: 0 auto;
+  padding-block: 48px 60px;
+  align-items: start;
+}
+.companion-story {
+  min-width: 0;
+  padding-top: 5px;
+}
+.companion-edition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font:
+    9px Consolas,
+    monospace;
+  letter-spacing: 1.2px;
+  padding-bottom: 25px;
+}
+.companion-edition svg {
+  color: var(--kids-warm);
+}
+.companion-story h1 {
+  font-size: clamp(42px, 3.8vw, 66px);
+  line-height: 1.06;
+  font-weight: 800;
+  letter-spacing: -2.7px;
+  margin: 0;
+}
+.companion-story h1 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: var(--kids-warm);
+  letter-spacing: -2.2px;
+}
+.companion-story > p {
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 340px;
+  margin-top: 20px;
+  color: var(--kids-muted);
+}
+.companion-portrait {
+  height: 365px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+  isolation: isolate;
+}
+.companion-portrait-arch {
+  position: absolute;
+  inset: 14px 8px 30px;
+  border-radius: 180px 180px 100px 100px;
+  background: var(--kids-soft);
+  z-index: -2;
+}
+.capibara-salvia .companion-portrait-arch {
+  inset: 24px 6px 25px;
+  border-radius: 48% 48% 28px 28px;
+}
+.companion-portrait-orbit {
+  position: absolute;
+  inset: 4px -3px 20px;
+  border: 1px solid var(--kids-line);
+  border-radius: 50%;
+  transform: rotate(-8deg);
+  z-index: -1;
+}
+.capibara-salvia .companion-portrait-orbit {
+  border-radius: 48% 48% 34px 34px;
+  inset: 12px -5px 17px;
+  transform: rotate(0);
+}
+.companion-portrait > .companion-illustration {
+  width: 305px;
+  height: 352px;
+  position: relative;
+  z-index: 1;
+}
+.companion-portrait-star {
+  position: absolute;
+  top: 37px;
+  right: 25px;
+  color: var(--kids-warm);
+  font-size: 25px;
+  animation: companion-spark 4s ease-in-out infinite;
+}
+.companion-bubble {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #90babf;
+  border-radius: 50%;
+  top: 105px;
+  left: 24px;
+  animation: companion-bubble 6s ease-in-out infinite;
+}
+.bubble-two {
+  width: 9px;
+  height: 9px;
+  top: 132px;
+  left: 12px;
+  animation-delay: -2s;
+}
+.capibara-salvia .companion-bubble {
+  border-color: #b8c9df;
+}
+.companion-portrait-label {
+  position: absolute;
+  bottom: 17px;
+  left: 7px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 17px;
+  background: var(--kids-paper);
+  border: 1px solid var(--kids-line);
+  border-radius: 12px;
+  transform: rotate(-3deg);
+}
+.companion-portrait-label svg {
+  width: 27px;
+  height: 27px;
+}
+.companion-portrait-label > span {
+  font-size: 19px;
+  font-weight: 800;
+}
+.companion-portrait-label small {
+  display: block;
+  font:
+    6.5px Consolas,
+    monospace;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  color: var(--kids-muted);
+}
+.companion-portrait-note {
+  position: absolute;
+  right: 3px;
+  bottom: 8px;
+  font:
+    italic 13px Georgia,
+    serif;
+  color: var(--kids-muted);
+  transform: rotate(3deg);
+}
+.companion-palette {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 25px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid var(--kids-line);
+}
+.companion-palette > span {
+  width: 14px;
+  height: 14px;
+  background: var(--kids-soft);
+  border-radius: 50%;
+  border: 1px solid var(--kids-line);
+}
+.companion-palette > span:nth-child(2) {
+  background: var(--kids-ink);
+  border-color: var(--kids-ink);
+}
+.companion-palette > span:nth-child(3) {
+  background: var(--comp-peach);
+}
+.companion-palette p {
+  font:
+    7px Consolas,
+    monospace;
+  letter-spacing: 1px;
+  margin-left: 7px;
+  color: var(--kids-muted);
+}
+.companion-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 18px;
+  font-size: 11px;
+  color: var(--kids-accent);
+}
+.companion-next svg {
+  transition: transform 0.2s var(--ease);
+}
+.companion-next:hover svg {
+  transform: translateX(4px);
+}
+.companion-device-section {
+  min-width: 0;
+}
+.companion-device-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font:
+    7px Consolas,
+    monospace;
+  letter-spacing: 0.6px;
+  margin-bottom: 19px;
+  gap: 8px;
+}
+.companion-device-caption button {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font:
+    9px 'Segoe UI',
+    sans-serif;
+  white-space: nowrap;
+}
+.companion-phone {
+  max-width: 380px;
+  margin: auto;
+  border: 1px solid var(--kids-line);
+  background: var(--kids-paper);
+  border-radius: 36px;
+  padding: 7px;
+  box-shadow: 0 10px 40px -26px #284f4330;
+  overflow: hidden;
+}
+.companion-phone-status {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px 10px;
+  font:
+    9px 'Segoe UI',
+    sans-serif;
+}
+.companion-phone-scroll {
+  height: 705px;
+  border-radius: 19px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--kids-line) transparent;
+}
+.companion-phone-home {
+  display: block;
+  height: 3px;
+  width: 65px;
+  border-radius: 5px;
+  background: var(--kids-line);
+  margin: 10px auto 5px;
+}
+.companion-open,
+.companion-pause {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 10px;
+  margin: 20px auto 0;
+}
+.companion-pause {
+  margin-top: 15px;
+  font-size: 9px;
+  color: var(--kids-muted);
+}
+.companion-study .kids-qr-studio {
+  padding-top: 3px;
+}
+.companion-study .kids-qr-eyebrow {
+  font-size: 7px;
+  letter-spacing: 0.6px;
+}
+.companion-study .kids-qr-studio h2 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+.companion-study .kids-qr-image {
+  transform: none;
+  margin-top: 20px;
+}
+.companion-study .kids-qr-image img {
+  width: 100%;
+}
+.companion-study .kids-choice {
+  border-radius: 9px;
+  overflow: hidden;
+}
+.companion-study .kids-patient-field select {
+  border-radius: 8px;
+}
+.companion-study-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 24px;
+  border-top: 1px solid var(--kids-line);
+  font:
+    7px Consolas,
+    monospace;
+  letter-spacing: 1px;
+  color: var(--kids-muted);
+}
+.companion-study-footer p {
+  font:
+    italic 16px Georgia,
+    serif;
+  letter-spacing: 0;
+}
+.companion-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: companion-blink 7s ease-in-out infinite;
+}
+.otter-tail {
+  transform-origin: 180px 244px;
+  animation: companion-tail 4.5s ease-in-out infinite;
+}
+.otter-syringe {
+  transform-origin: 130px 218px;
+  animation: companion-syringe 4.5s ease-in-out infinite;
+}
+.capi-wave {
+  transform-origin: 180px 190px;
+  animation: companion-greeting 5s ease-in-out infinite;
+}
+@keyframes companion-blink {
+  0%,
+  93%,
+  98%,
+  100% {
+    transform: scaleY(1);
+  }
+  95%,
+  96% {
+    transform: scaleY(0.12);
+  }
+}
+@keyframes companion-tail {
+  50% {
+    transform: rotate(-4deg);
+  }
+}
+@keyframes companion-syringe {
+  50% {
+    transform: translateY(-2px) rotate(2deg);
+  }
+}
+@keyframes companion-greeting {
+  0%,
+  12%,
+  46%,
+  100% {
+    transform: rotate(0);
+  }
+  22%,
+  36% {
+    transform: rotate(-5deg);
+  }
+  29% {
+    transform: rotate(3deg);
+  }
+}
+@keyframes companion-bubble {
+  50% {
+    transform: translateY(-9px);
+    opacity: 0.6;
+  }
+}
+@keyframes companion-spark {
+  50% {
+    transform: scale(0.8) rotate(12deg);
+  }
+}
+[data-paused='true']
+  :is(
+    .companion-eyes,
+    .otter-tail,
+    .otter-syringe,
+    .capi-wave,
+    .companion-bubble,
+    .companion-portrait-star,
+    .companion-tiny-star
+  ) {
+  animation: none;
+}
+@media (max-width: 1120px) {
+  .companion-workshop-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+    gap: 40px;
+    max-width: 950px;
+  }
+  .companion-study .kids-qr-studio {
+    grid-column: 1 / -1;
+    max-width: 530px;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid var(--kids-line);
+    padding-top: 35px;
+  }
+  .companion-study .kids-qr-image {
+    max-width: 290px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 700px) {
+  .companion-workshop-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+    padding-top: 30px;
+  }
+  .companion-story {
+    max-width: 440px;
+    width: 100%;
+    margin: auto;
+  }
+  .companion-story h1 {
+    font-size: clamp(40px, 7vw, 52px);
+  }
+  .companion-story > p {
+    font-size: 13px;
+    max-width: 310px;
+  }
+  .companion-portrait {
+    height: 335px;
+  }
+  .companion-portrait > .companion-illustration {
+    height: 327px;
+    width: 285px;
+  }
+  .companion-device-section {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+  }
+  .companion-study .kids-qr-studio {
+    grid-column: auto;
+  }
+  .companion-study-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .companion-study-footer p {
+    width: 100%;
+    order: -1;
+  }
+  .companion-study .kids-study-header {
+    flex-wrap: wrap;
+    padding-block: 16px;
+  }
+  .companion-study .kids-study-brand {
+    flex: 1;
+    margin-right: 30px;
+  }
+  .companion-study .kids-study-header nav {
+    width: 100%;
+    justify-content: center;
+  }
+  .companion-study .kids-study-header nav a {
+    padding: 8px 12px;
+  }
+  .companion-study .kids-study-header nav a span {
+    display: inline;
+  }
+  .companion-study .kids-study-brand small {
+    max-width: none;
+    font-size: 5.5px;
+    letter-spacing: 0.8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(
+    .companion-eyes,
+    .otter-tail,
+    .otter-syringe,
+    .capi-wave,
+    .companion-bubble,
+    .companion-portrait-star,
+    .companion-tiny-star
+  ) {
+    animation: none !important;
+  }
+  .companion-next svg {
+    transition: none;
+  }
+}
