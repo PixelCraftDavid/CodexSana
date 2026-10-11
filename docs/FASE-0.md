@@ -5,7 +5,7 @@ Revisión: 11 de octubre de 2026. Alcance: inventario local y decisiones; no imp
 ## Decisiones del titular
 
 - Vercel Hobby para pruebas, confirmado en el chat el 11 de octubre de 2026. No habilita actividad comercial. Antes de vender tarjetas, confirmar un plan comercial.
-- Dominio definitivo pendiente por decisión del titular. Las primeras pruebas podrán usar un dominio del proyecto en Vercel, cuando se conecte. No hay dominio ni despliegue creado en esta fase.
+- Dominio definitivo pendiente por decisión del titular. Las primeras pruebas usarán un dominio del proyecto en Vercel. El primer intento de despliegue (commit c2e7b05) compiló, pero falló al buscar la salida `.next`; se preparó la corrección a `.next-production`. Todavía no hay despliegue exitoso ni dominio comprobado.
 - Datos reales bloqueados hasta completar controles, revisión de privacidad, acuerdos con proveedores y auditoría. La aceptación de esos acuerdos por el titular sigue pendiente; no se ha realizado en su nombre.
 
 ## Rutas y exposición actual
@@ -74,7 +74,7 @@ En fases siguientes, definir por entorno los nombres de variables para conexione
 
 El nuevo `scripts/inventory-phase0.ts` es TypeScript y entra en el typecheck estricto. Los cuatro scripts `.cjs` existentes todavía requieren migración o JSDoc con `checkJs`; no afirmar que el gate sin `any` cubre esos scripts. No hay ESLint, commitlint, CI, SAST, ZAP, SBOM ni cobertura automática configurados aún. El snapshot enumera archivos de más de 300 líneas; los límites de función y complejidad todavía no están medidos por lint.
 
-En el inventario inicial no existía `.git`. El titular inicializó el repositorio y configuró el remoto `PixelCraftDavid/CodexSana`; ahora la rama local es `main`. Esto no demuestra protección de ramas, escaneo de historial ni CI remoto en verde. La conexión con Vercel y el build remoto siguen pendientes.
+En el inventario inicial no existía `.git`. El titular inicializó el repositorio y configuró el remoto `PixelCraftDavid/CodexSana`; ahora la rama local es `main`. El log del primer intento Vercel confirma la importación de main y la compilación, pero termina con error de directorio de salida. Esto no demuestra protección de ramas, escaneo de historial ni CI remoto en verde. [Evidencia del intento remoto](evidence/phase0/vercel-build-c2e7b05.md).
 
 ## Evidencia y pendientes
 

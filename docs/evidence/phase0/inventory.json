@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T21:57:11.994Z",
+  "generatedAt": "2026-10-11T22:07:31.184Z",
   "runtime": {
     "node": "v24.21.0",
     "platform": "win32",
@@ -8,10 +8,10 @@
   "packageLockSHA256": "3e188698e75d17b25104d7e19bafb8d372fea3f232c26495694276933326a343",
   "gitRepositoryPresent": true,
   "build": {
-    "buildId": "plGTQAfe-D6VkBf8R2z9N",
+    "buildId": "V158SStu7-cRaASDDIump",
     "staticRoutes": [
-      "/conceptos",
-      "/"
+      "/",
+      "/conceptos"
     ],
     "dynamicRoutes": [
       "/conceptos/[concept]",

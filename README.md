@@ -66,7 +66,7 @@ Las fichas y tarjetas muestran **«Datos reportados por el titular»** y **«No 
 
 El encargo de producción se trabaja una fase por sesión. Consulta el [inventario de Fase 0](docs/FASE-0.md), las [decisiones de arquitectura](docs/adr/README.md), las [licencias](docs/DEPENDENCIAS.md) y la [comprobación de plataformas](docs/PLATAFORMAS.md).
 
-El titular confirmó Hobby para demostración sin actividad comercial; dominio definitivo pendiente. Ya inició sesión en Vercel; la vinculación del proyecto y su despliegue aún no están comprobados. No hay datos reales autorizados. El build local tiene tres rutas dinámicas Next; el conteo de funciones Vercel todavía no está comprobado. Consulta los [pasos del primer despliegue de demostración](docs/DESPLIEGUE-DEMO.md).
+El titular confirmó Hobby para demostración sin actividad comercial; dominio definitivo pendiente. El proyecto se importó en Vercel: su primer build compiló, pero el despliegue falló por el directorio de salida. Se preparó la configuración explícita `.next-production`; falta verificar el nuevo intento. No hay datos reales autorizados. El build local tiene tres rutas dinámicas Next; el conteo de funciones Vercel todavía no está comprobado. Consulta los [pasos del primer despliegue de demostración](docs/DESPLIEGUE-DEMO.md).
 
 La nueva versión excluirá fotografías de pacientes. Su eliminación está inventariada y aún pendiente de implementación. La configuración actual del PDF solicita cifrado; falta evidencia independiente de qpdf. No se declara el prototipo seguro ni apto para datos reales.
 

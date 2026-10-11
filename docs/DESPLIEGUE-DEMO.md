@@ -8,13 +8,13 @@ Usar únicamente datos ficticios. Esta versión no tiene autenticación del admi
 
 Antes de desplegar, comprobar la corrección de PostCSS con auditoría de producción y build. Subir el commit que contiene el lockfile corregido y `vercel.json`; importar un commit anterior conserva el hallazgo.
 
-`vercel.json` fija Next.js, instalación con `npm ci` y build con `npm run build`. La salida se detecta mediante el adaptador de Next, incluida la configuración `distDir`; no usar un preset estático ni forzar `out`. Node 24.x se declara en package.json. El build real de Vercel, incluido Sharp, sigue pendiente.
+`vercel.json` fija Next.js, instalación con `npm ci`, build con `npm run build` y salida `.next-production`, coincidente con `distDir` en producción. No usar un preset estático ni forzar `out`. Node 24.x se declara en package.json. El primer intento remoto compiló, pero el adaptador buscó `.next`; por ello la salida ahora se declara explícitamente. Falta comprobar el despliegue completo y las exportaciones con Sharp.
 
 ## Importación
 
 1. En el espacio personal Hobby, abrir Add New → Project.
 2. Importar PixelCraftDavid/CodexSana. Si no aparece, Configure GitHub App y autorizar solo este repositorio.
-3. Nombre sugerido del proyecto: codexsana. Raíz del repositorio; framework Next.js; Node 24.x. Mantener Output Directory sin override. No se necesitan variables propias para este prototipo.
+3. Nombre sugerido del proyecto: codexsana. Raíz del repositorio; framework Next.js; Node 24.x. La salida `.next-production` se fija en vercel.json; no agregar un override diferente en el panel. No se necesitan variables propias para este prototipo.
 4. Tras las comprobaciones locales, pulsar Deploy y conservar la URL, el SHA del commit, los logs y la salida del build.
 5. Revisar Deployment Protection: activar protección de previews con Vercel Authentication si está disponible en la cuenta. Verificar su funcionamiento; no confundirla con autenticación dentro de la app.
 
